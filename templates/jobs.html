@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<p>hey</p>
+
+	{% for job in jobs %}
+		<div class=flash>
+			<p><a href="{{ job['link'] }}">{{ job['title'] }}</a></p>
+			<p>{{ job['job_type'] }}</p>
+			
+			<p>{{ job['info'] }}</p>
+
+
+		</div>
+	{% endfor %}
+{% endblock content %}
